@@ -25,7 +25,7 @@ $ yarn run dev
 
 Project will be running on localhost:9000
 
-#### Start project in production mode
+#### Build project for production mode
 
 ```
 $ yarn run build
