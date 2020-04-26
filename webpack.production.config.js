@@ -48,12 +48,6 @@ module.exports = {
                         plugins: ['transform-class-properties']
                     }
                 }
-            },
-            {
-                test: /\.hbs$/,
-                use: [
-                    'handlebars-loader'
-                ]
             }
         ]
     }
@@ -68,7 +62,7 @@ module.exports = {
             chunks: ['main', 'vendors~main'],
             title: 'Title',
             description: 'Description',
-            template: 'src/template.hbs',
+            template: 'src/template.html',
         })
     ]
 };
