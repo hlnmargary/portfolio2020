@@ -1,0 +1,8 @@
+@import './fonts.scss';
+@import './mixins.scss';
+
+@import '../components/title/title.scss';
+
+h1 {
+  font-family: 'montserrat';
+}
