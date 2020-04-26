@@ -1,0 +1,15 @@
+h1 {
+  font-family: 'Montserrat';
+  span {
+    &.hovered {
+      text-decoration: underline;
+    }
+  }
+}
+
+.card {
+  display: none;
+  background: antiquewhite;
+  max-width: 350px;
+  height: 70%;
+}
