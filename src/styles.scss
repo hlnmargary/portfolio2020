@@ -1,2 +1,8 @@
 @import '~font-awesome/css/font-awesome.css';
-@import './global/styles';
+@import './global/fonts';
+
+h1 {
+  font-family: 'Montserrat';
+  font-weight: $bold-weight;
+  font-style: $italic;
+}
