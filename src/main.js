@@ -1,2 +1,7 @@
 import './styles.scss';
-import mainText from './partials/main-text/main-text';
+
+// HERO PAGE
+import './partials/loader/loader';
+import './partials/header/header';
+import './partials/introduction/introduction';
+import './partials/expertise/expertise';

@@ -1,0 +1,13 @@
+.expertise {
+  width: 100%;
+  display: flex;
+  &-block {
+    width: 50%;
+  }
+  :first-child {
+    background-color: antiquewhite;
+  }
+  :last-child {
+    background-color: aquamarine;
+  }
+}
