@@ -74,7 +74,7 @@ module.exports = {
             chunks: ['main', 'vendors~main'],
             title: 'Title',
             description: 'Description',
-            template: 'src/template.html',
+            template: 'src/hero.html',
         })
     ]
 };

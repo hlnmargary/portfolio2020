@@ -14,7 +14,7 @@ module.exports = {
     mode: 'development',
     devServer: {
         contentBase: path.resolve(__dirname, './dist'),
-        index: 'main.html',
+        index: 'hero.html',
         port: 9000
     },
     module: {
@@ -66,11 +66,18 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            filename: "main.html",
+            filename: "hero.html",
             chunks: ['main'],
-            title: 'Title',
+            title: 'Helene Margary\'s Portfolio',
             description: 'Description',
-            template: 'src/template.html',
+            template: 'src/hero.html',
+        }),
+        new HtmlWebpackPlugin({
+            filename: "expertise.html",
+            chunks: ['main'],
+            title: 'Helene Margary\'s Portfolio',
+            description: 'Helene Margary\'s Portfolio',
+            template: 'src/expertise.html',
         })
     ]
 };
