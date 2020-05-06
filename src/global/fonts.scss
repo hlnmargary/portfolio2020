@@ -1,4 +1,15 @@
 @import './variables.scss';
+
+
+@font-face {
+  font-family: 'Suranna';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Suranna Regular'), 
+      url('./assets/fonts/Suranna-Regular.woff') format('woff');
+  }
+
+
 /* montserrat-100 - latin */
 @font-face {
   font-family: 'Montserrat';

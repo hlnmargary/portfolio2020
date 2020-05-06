@@ -10,7 +10,7 @@
   height: 100%;
   position: relative;
   h1 {
-    font-family: 'Montserrat';
+    font-family: 'Suranna';
     span {
       &.hovered {
         text-decoration: underline;
@@ -36,8 +36,9 @@
     &-card {
       position: relative;
       transition: transform .6s .2s;
-      height: 100%;
-      background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url("https://images.unsplash.com/photo-1559113513-d5e09c78b9dd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9");
+      width: 400px;
+      height: 400px;
+      background-image: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)),url('https://images.unsplash.com/photo-1559113513-d5e09c78b9dd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9');
       background-size: 100%;
       &.active {
         transition: none;
