@@ -1,5 +1,6 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const sassUtils = require('node-sass-utils');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const sassVars = require(__dirname + "/src/global/theme.js");
 
@@ -54,7 +55,7 @@ module.exports = {
                     {
                         loader: 'sass-loader',
                         options: {
-                            functions: {
+                            sassOptions: {
                                 "get($keys)": function (keys) {
                                     keys = keys.getValue().split(".");
                                     let result = sassVars;

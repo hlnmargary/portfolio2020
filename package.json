@@ -31,6 +31,7 @@
     "@babel/preset-env": "^7.9.5",
     "clean-webpack-plugin": "^3.0.0",
     "font-awesome": "^4.7.0",
-    "html-loader": "^1.1.0"
+    "html-loader": "^1.1.0",
+    "node-sass-utils": "^1.1.3"
   }
 }

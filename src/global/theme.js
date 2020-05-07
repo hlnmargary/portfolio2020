@@ -1,4 +1,3 @@
-// theme.js
 module.exports = {
   font: {
     extra_thin_weight: '100',
