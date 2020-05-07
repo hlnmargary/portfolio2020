@@ -1,8 +1,6 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const sassUtils = require('node-sass-utils');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const sassVars = require(__dirname + "/src/global/theme.js");
 
 module.exports = {
     entry: {
@@ -52,21 +50,11 @@ module.exports = {
                 use: [
                     { loader: 'style-loader' },
                     { loader: 'css-loader' },
+                    {loader: 'sass-loader'},
                     {
-                        loader: 'sass-loader',
+                        loader: 'sass-resources-loader',
                         options: {
-                            sassOptions: {
-                                "get($keys)": function (keys) {
-                                    keys = keys.getValue().split(".");
-                                    let result = sassVars;
-                                    let i;
-                                    for (i = 0; i < keys.length; i++) {
-                                        result = result[keys[i]];
-                                    }
-                                    result = sassUtils.castToSass(result);
-                                    return result;
-                                }
-                            }
+                            resources: [path.resolve(__dirname, './src/global/variables.scss')]
                         }
                     }
                 ]
