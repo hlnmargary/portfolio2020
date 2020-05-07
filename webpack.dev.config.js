@@ -1,10 +1,13 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const sassVars = require(__dirname + "/src/global/theme.js");
 
 module.exports = {
     entry: {
-        'main': './src/main.js'
+        'global': './src/global.js',
+        'hero': './src/hero.js',
+        'expertise': './src/expertise.js'
     },
     output: {
         filename: '[name].bundle.js',
@@ -46,7 +49,25 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    'style-loader', 'css-loader', 'sass-loader'
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            functions: {
+                                "get($keys)": function (keys) {
+                                    keys = keys.getValue().split(".");
+                                    let result = sassVars;
+                                    let i;
+                                    for (i = 0; i < keys.length; i++) {
+                                        result = result[keys[i]];
+                                    }
+                                    result = sassUtils.castToSass(result);
+                                    return result;
+                                }
+                            }
+                        }
+                    }
                 ]
             },
             {
@@ -67,14 +88,14 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             filename: "hero.html",
-            chunks: ['main'],
+            chunks: ['global', 'hero'],
             title: 'Helene Margary\'s Portfolio',
             description: 'Description',
             template: 'src/hero.html',
         }),
         new HtmlWebpackPlugin({
             filename: "expertise.html",
-            chunks: ['main'],
+            chunks: ['global', 'expertise'],
             title: 'Helene Margary\'s Portfolio',
             description: 'Helene Margary\'s Portfolio',
             template: 'src/expertise.html',
