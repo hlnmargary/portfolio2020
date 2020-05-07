@@ -2,30 +2,30 @@ import './loader.scss';
 
 window.onload = function () {
 
-  var loader = document.querySelector('#loader');
-  var strings = loader.dataset.strings.split(',');
-  var counter = 0;
+  let loader = document.querySelector('#loader');
+  let strings = loader.dataset.strings.split(',');
+  let counter = 0;
 
   setInterval(function () {
-    var logoTitle = strings[counter];
-    if (counter < strings.length - 1) {
+    let logoTitle = strings[counter];
+    if (counter < strings.length) {
       counter++;
     }
 
-    var logoRandom = ''; 0
-    var possible = "-+*/|}{[]~\\\":;?/.><=+-_)(*&^%$#@!)}";
+    let logoRandom = '';
+    let possible = "?=+*&^%$#@!)}";
 
     function generateRandomTitle(i, logoRandom) {
       loader.classList.add('glitch');
       setTimeout(function () {
         loader.innerHTML = logoRandom;
         loader.dataset.text = logoRandom;
-      }, i * 80);
+      }, i * 55);
     }
 
-    for (var i = 0; i < logoTitle.length + 1; i++) {
+    for (let i = 0; i < logoTitle.length + 1; i++) {
       logoRandom = logoTitle.substr(0, i);
-      for (var j = i; j < logoTitle.length; j++) {
+      for (let j = i; j < logoTitle.length; j++) {
         logoRandom += possible.charAt(Math.floor(Math.random() * possible.length));
       }
       generateRandomTitle(i, logoRandom);
