@@ -1,6 +1,3 @@
-@import './variables.scss';
-
-
 @font-face {
   font-family: 'Suranna';
   font-style: normal;
@@ -9,12 +6,11 @@
       url('./assets/fonts/Suranna-Regular.woff') format('woff');
   }
 
-
 /* montserrat-100 - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: $normal;
-  font-weight: $extra-thin-weight;
+  font-style: get('font.normal');
+  font-weight: get('font.extra_thin_weight');
   src: url('./assets/fonts/montserrat-v14-latin-100.eot'); /* IE9 Compat Modes */
   src: local('Montserrat Thin'), local('Montserrat-Thin'),
   url('./assets/fonts/montserrat-v14-latin-100.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -26,8 +22,8 @@
 /* montserrat-100italic - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: $italic;
-  font-weight: $extra-thin-weight;
+  font-style: get('font.italic');
+  font-weight: get('font.extra_thin_weight');
   src: url('./assets/fonts/montserrat-v14-latin-100italic.eot'); /* IE9 Compat Modes */
   src: local('Montserrat Thin Italic'), local('Montserrat-ThinItalic'),
   url('./assets/fonts/montserrat-v14-latin-100italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -39,8 +35,8 @@
 /* montserrat-200 - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: $normal;
-  font-weight: $thin-weight;
+  font-style: get('font.normal');
+  font-weight: get('font.thin_weight');
   src: url('./assets/fonts/montserrat-v14-latin-200.eot'); /* IE9 Compat Modes */
   src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'),
   url('./assets/fonts/montserrat-v14-latin-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -52,8 +48,8 @@
 /* montserrat-200italic - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: $italic;
-  font-weight: $thin-weight;
+  font-style: get('font.italic');
+  font-weight: get('font.thin_weight');
   src: url('./assets/fonts/montserrat-v14-latin-200italic.eot'); /* IE9 Compat Modes */
   src: local('Montserrat ExtraLight Italic'), local('Montserrat-ExtraLightItalic'),
   url('./assets/fonts/montserrat-v14-latin-200italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -65,8 +61,8 @@
 /* montserrat-300 - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: $normal;
-  font-weight: $light-weight;
+  font-style: get('font.normal');
+  font-weight: get('font.light_weight');
   src: url('./assets/fonts/montserrat-v14-latin-300.eot'); /* IE9 Compat Modes */
   src: local('Montserrat Light'), local('Montserrat-Light'),
   url('./assets/fonts/montserrat-v14-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -78,8 +74,8 @@
 /* montserrat-300italic - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: $italic;
-  font-weight: $light-weight;
+  font-style: get('font.italic');
+  font-weight: get('font.light_weight');
   src: url('./assets/fonts/montserrat-v14-latin-300italic.eot'); /* IE9 Compat Modes */
   src: local('Montserrat Light Italic'), local('Montserrat-LightItalic'),
   url('./assets/fonts/montserrat-v14-latin-300italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -91,8 +87,8 @@
 /* montserrat-regular - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: $normal;
-  font-weight: $normal-weight;
+  font-style: get('font.normal');
+  font-weight: get('font.normal_weight');
   src: url('./assets/fonts/montserrat-v14-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Montserrat Regular'), local('Montserrat-Regular'),
   url('./assets/fonts/montserrat-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -104,8 +100,8 @@
 /* montserrat-italic - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: $italic;
-  font-weight: $normal-weight;
+  font-style: get('font.italic');
+  font-weight: get('font.normal_weight');
   src: url('./assets/fonts/montserrat-v14-latin-italic.eot'); /* IE9 Compat Modes */
   src: local('Montserrat Italic'), local('Montserrat-Italic'),
   url('./assets/fonts/montserrat-v14-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -117,8 +113,8 @@
 /* montserrat-500 - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: $normal;
-  font-weight: $medium-weight;
+  font-style: get('font.normal');
+  font-weight: get('font.medium_weight');
   src: url('./assets/fonts/montserrat-v14-latin-500.eot'); /* IE9 Compat Modes */
   src: local('Montserrat Medium'), local('Montserrat-Medium'),
   url('./assets/fonts/montserrat-v14-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -130,8 +126,8 @@
 /* montserrat-500italic - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: $italic;
-  font-weight: $medium-weight;
+  font-style: get('font.italic');
+  font-weight: get('font.medium_weight');
   src: url('./assets/fonts/montserrat-v14-latin-500italic.eot'); /* IE9 Compat Modes */
   src: local('Montserrat Medium Italic'), local('Montserrat-MediumItalic'),
   url('./assets/fonts/montserrat-v14-latin-500italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -143,8 +139,8 @@
 /* montserrat-600 - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: $normal;
-  font-weight: $semibold-weight;
+  font-style: get('font.normal');
+  font-weight: get('font.semibold_weight');
   src: url('./assets/fonts/montserrat-v14-latin-600.eot'); /* IE9 Compat Modes */
   src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
   url('./assets/fonts/montserrat-v14-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -156,8 +152,8 @@
 /* montserrat-700 - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: $normal;
-  font-weight: $bold-weight;
+  font-style: get('font.normal');
+  font-weight: get('font.bold_weight');
   src: url('./assets/fonts/montserrat-v14-latin-700.eot'); /* IE9 Compat Modes */
   src: local('Montserrat Bold'), local('Montserrat-Bold'),
   url('./assets/fonts/montserrat-v14-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -169,8 +165,8 @@
 /* montserrat-600italic - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: $italic;
-  font-weight: $semibold-weight;
+  font-style: get('font.italic');
+  font-weight: get('font.semibold_weight');
   src: url('./assets/fonts/montserrat-v14-latin-600italic.eot'); /* IE9 Compat Modes */
   src: local('Montserrat SemiBold Italic'), local('Montserrat-SemiBoldItalic'),
   url('./assets/fonts/montserrat-v14-latin-600italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -182,8 +178,8 @@
 /* montserrat-700italic - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: $italic;
-  font-weight: $bold-weight;
+  font-style: get('font.italic');
+  font-weight: get('font.bold_weight');
   src: url('./assets/fonts/montserrat-v14-latin-700italic.eot'); /* IE9 Compat Modes */
   src: local('Montserrat Bold Italic'), local('Montserrat-BoldItalic'),
   url('./assets/fonts/montserrat-v14-latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -195,8 +191,8 @@
 /* montserrat-800italic - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: $italic;
-  font-weight: $extra-bold-weight;
+  font-style: get('font.italic');
+  font-weight: get('font.extra_bold_weight');
   src: url('./assets/fonts/montserrat-v14-latin-800italic.eot'); /* IE9 Compat Modes */
   src: local('Montserrat ExtraBold Italic'), local('Montserrat-ExtraBoldItalic'),
   url('./assets/fonts/montserrat-v14-latin-800italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -208,8 +204,8 @@
 /* montserrat-800 - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: $normal;
-  font-weight: $extra-bold-weight;
+  font-style: get('font.normal');
+  font-weight: get('font.extra_bold_weight');
   src: url('./assets/fonts/montserrat-v14-latin-800.eot'); /* IE9 Compat Modes */
   src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'),
   url('./assets/fonts/montserrat-v14-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -221,8 +217,8 @@
 /* montserrat-900 - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: $normal;
-  font-weight: $black-weight;
+  font-style: get('font.normal');
+  font-weight: get('font.black_weight');
   src: url('./assets/fonts/montserrat-v14-latin-900.eot'); /* IE9 Compat Modes */
   src: local('Montserrat Black'), local('Montserrat-Black'),
   url('./assets/fonts/montserrat-v14-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -234,8 +230,8 @@
 /* montserrat-900italic - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: $italic;
-  font-weight: $black-weight;
+  font-style: get('font.italic');
+  font-weight: get('font.black_weight');
   src: url('./assets/fonts/montserrat-v14-latin-900italic.eot'); /* IE9 Compat Modes */
   src: local('Montserrat Black Italic'), local('Montserrat-BlackItalic'),
   url('./assets/fonts/montserrat-v14-latin-900italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
