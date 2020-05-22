@@ -1,17 +1,24 @@
 
-ul {
-  font-family: 'Montserrat';
-  font-size: 10px;
-  line-height: 173.9%;
-}
-
-.logo {
-  width: 31px;
-  &-dot {
-    background-color: black;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin: 18px auto;
+header {
+  position: absolute;
+  left: 118px;
+  top: 90px;
+  ul {
+    font-family: 'Montserrat';
+    font-weight: $bold_weight;
+    font-size: 10px;
+    line-height: 173.9%;
+  }
+  
+  .logo {
+    width: 31px;
+    &-dot {
+      background-color: black;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin: 18px auto;
+    }
   }
 }
+

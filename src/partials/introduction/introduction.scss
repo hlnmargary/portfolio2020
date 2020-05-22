@@ -1,16 +1,49 @@
 .introduction {
   position: relative;
+  margin-left: 118px;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  color: $dark;
   &-content {
+    width: 100%;
+    transform: translateY(calc(50% + 32px));
     &_name {
       font-family: 'Suranna';
       font-size: 32px;
       line-height: 118.8%;
     }
+    &_line {
+      height: 1px;
+      width: 112px;
+      background-color: $black;
+      margin: 35px 0;
+    }
+    &_text {
+      font-family: 'Montserrat';
+      font-weight: $light_weight;
+      font-style: $italic;
+      font-size: 16px;
+      line-height: auto;
+      max-width: 55%;
+    }
   }
-  &-link {
-
-  }
-  &-cv {
-
+  &-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 52px;
+    &_link > a {
+      font-family: 'Montserrat';
+      font-size: 12px;
+      font-weight: $bold_weight;
+    }
+    &_cv > a {
+      font-family: 'Montserrat';
+      font-size: 12px;
+      font-weight: $medium_weight;
+      margin-right: 84px;
+    }
   }
 }

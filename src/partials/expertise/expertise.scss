@@ -1,13 +1,136 @@
 .expertise {
   width: 100%;
   display: flex;
+  height: 100%;
   &-block {
     width: 50%;
-  }
-  :first-child {
-    background-color: antiquewhite;
-  }
-  :last-child {
-    background-color: aquamarine;
+    height: 100%;
+    &_dev {
+      background-color: $dark;
+      #letter,
+      #textCurved,
+      #border {
+        fill: $black;
+      }
+    }
+    &_ux {
+      background-color: $light;
+      #letter1,
+      #textCurved1,
+      #border {
+        fill: $dark;
+      }
+    }
   }
 }
+
+// SVG STYLE
+.textCircle, .textCircle1 {
+  display: block;
+  margin: auto;
+  height: 100%;
+}
+
+#text,
+#letter,
+#letter1
+#pathTextCurved {
+  pointer-events: none;
+}
+
+#letter, #letter1 {
+  text-anchor: middle;
+  alignment-baseline: central;
+  font-size: 50px;
+  font-weight: 100;
+}
+
+#textCurved, #textCurved1 {
+  font-weight: $extra_bold_weight;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+}
+
+
+//MENU
+
+.expertise-block_ux {
+  position: relative;
+  .dropDownMenu_ux {
+    position: absolute;
+    top: 80px;
+    left: 86px;
+    & > h2 {
+      font-size: 20px;
+      font-family: 'Suranna';
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+    .subnavigation-part {
+      font-family: 'Montserrat';
+      font-weight: $semibold_weight;
+      font-size: 10px;
+      & > li {
+        line-height: 210%;
+      }
+    }
+  }
+  .cardProject_ux {
+    position: absolute;
+    border: solid 1px $dark;
+    width: 110px;
+    height: 170px;
+    right: 60px;
+    top: 80px;
+    color: $dark;
+    .text-project {
+      font-size: 14px;
+      font-family: 'Suranna';
+      text-transform: uppercase;
+      text-align: center;
+      padding: 20px;
+    }
+    .ligne {
+      width: 100%;
+      height: 1px;
+      background-color: $dark;
+    }
+    .secondpart {
+      position: relative;
+      height: 100%;
+      padding: 12px;
+      & > h1 {
+        font-family: 'Montserrat';
+        font-weight: $black_weight;
+        width: 70%;
+        height: 100%;
+        font-size: 46px;
+        text-align: center;
+        span { 
+          font-size: 32px;
+          font-weight: $black_weight; 
+        }
+      }
+      .text-progress { 
+        position: absolute;
+        top: 54px;
+        right: -26px;
+        text-transform: uppercase;
+        width: auto;
+        transform: rotate(90deg);
+        font-size: 8px;
+        font-family: 'Montserrat';
+        font-weight: $light_weight;
+      }
+    }
+  }
+}
+
+.subnavigation-part_1,
+.subnavigation-part_2,
+.subnavigation-part_3 {
+  display: none;
+  &.displayed { 
+    display: block;
+  }
+} 

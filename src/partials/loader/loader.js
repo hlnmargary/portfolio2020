@@ -8,7 +8,7 @@ window.onload = function () {
 
   setInterval(function () {
     let logoTitle = strings[counter];
-    if (counter < strings.length) {
+    if (counter < strings) {
       counter++;
     }
 
