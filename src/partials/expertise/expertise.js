@@ -2,13 +2,16 @@ import './expertise.scss';
 
 const blocks = [...document.querySelectorAll('.expertise-block')];
 
+const getParent = (el) => {
+    while (!el.dataset.expertise) {
+        el = el.parentNode;
+    }
+    return el;
+}
+
 const handleClick = el => {
     if (!el.dataset.expertise) {
-        console.log("pas le bon element cliqué");
-        let parent = el.parentNode;
-        console.log(parent);
-
-        // console.log(document.querySelector(`${el}`));
+        el = getParent(el)
     }
     blocks.forEach(block => {
         if (el.dataset.expertise === block.dataset.expertise) block.style.width = '70%';
