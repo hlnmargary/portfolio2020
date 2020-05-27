@@ -1,4 +1,5 @@
 import './expertise.scss';
+import {TweenMax, Linear} from "gsap";
 
 const blocks = [...document.querySelectorAll('.expertise-block')];
 
@@ -41,29 +42,20 @@ blocks.forEach(block => {
     });
 });
 
-let circlePath = document.getElementById("circlePath");
-let lengthCirclePath = circlePath.getTotalLength();
-let circle = document.getElementById("circle");
-let pathTextCurved = document.querySelector(".pathTextCurved");
+const circlePath = document.getElementById("circlePath");
+const lengthCirclePath = circlePath.getTotalLength();
+console.log(lengthCirclePath)
+const pathTextCurved = document.querySelector(".pathTextCurved");
 
-pathTextCurved.setAttribute(
-    "textLength", lengthCirclePath - 20);
-// const hover = TweenMax.to(textCurved, 10, {
-//     transformOrigin: "50% 50%",
-//     rotation: "360",
-//     repeat: -1,
-//     ease: Linear.easeNone
-// });
+pathTextCurved.setAttribute("textLength", lengthCirclePath - 20);
 
-// test.addEventListener("mouseover", function (event) {
-//     event.target.style.color = "orange";
+const hover = TweenMax.to(textCurved, 10, {
+    transformOrigin: "50% 50%",
+    rotation: "360",
+    repeat: -1,
+    ease: Linear.easeNone
+});
 
-//     setTimeout(function () {
-//         event.target.style.color = "";
-//     }, 500);
-// }, false);
-
-//////
 let circlePath1 = document.getElementById("circlePath1");
 let lengthCirclePath1 = circlePath1.getTotalLength();
 let circle1 = document.getElementById("circle1");
@@ -71,14 +63,12 @@ let textCurved1 = document.getElementById("textCurved1");
 
 
 pathTextCurved1.setAttribute("textLength", lengthCirclePath1 - 20);
-// const hover1 = TweenMax.to(textCurved1, 10, {
-//     transformOrigin: "50% 50%",
-//     rotation: "360",
-//     repeat: -1,
-//     ease: Linear.easeNone
-// });
-
-///
+const hover1 = TweenMax.to(textCurved1, 10, {
+    transformOrigin: "50% 50%",
+    rotation: "360",
+    repeat: -1,
+    ease: Linear.easeNone
+});
 
 const subnavTitles = [...document.querySelectorAll('.subnavigation-name')];
 const subnavParts = [...document.querySelectorAll('.subnavigation-part')];
