@@ -9,7 +9,7 @@ const getParent = (el) => {
     return el;
 }
 
-const handleClick = el => {
+const handleHover = el => {
     if (!el.dataset.expertise) {
         el = getParent(el)
     }
@@ -18,6 +18,22 @@ const handleClick = el => {
         else if (el.dataset.expertise !== block.dataset.expertise) block.style.width = '30%';
     });
 };
+
+// const handleClick = el => {
+//     if (!el.dataset.expertise) {
+//         el = getParent(el)
+//     }
+//     blocks.forEach(block => {
+//         if (el.dataset.expertise === block.dataset.expertise) block.style.width = '70%';
+//         else if (el.dataset.expertise !== block.dataset.expertise) block.style.width = '30%';
+//     });
+// };
+
+blocks.forEach(block => {
+    block.addEventListener('mouseover', function (e) {
+        handleHover(e.target);
+    });
+});
 
 blocks.forEach(block => {
     block.addEventListener('click', function (e) {
