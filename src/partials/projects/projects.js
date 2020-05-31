@@ -1,17 +1,41 @@
 import './projects.scss';
 import datas from '../../assets/datas/data.json';
 
+const getDataAccordingToParams = (param) => datas.filter(el => el[param] == true);
+
+/*
+* Get params from URL
+*/
+const params = new URLSearchParams(document.location.search.substring(1));
+let dataFiltered = null;
+for (const key of params.keys()) {
+    switch (key) {
+        case 'dev':
+            dataFiltered = getDataAccordingToParams(key);
+            break;
+        case 'design':
+            dataFiltered = getDataAccordingToParams(key);
+            break;
+        default:
+            console.log(`Sorry, the case is not handled`);
+    }
+}
+
+const projects = document.querySelector('.project');
+const wrapper = document.querySelector('.wrapper');
+for (let i = 0; i < dataFiltered.length - 1; i++) {
+    const clone = projects.cloneNode(true);
+    wrapper.appendChild(clone);
+}
+
 const image = document.querySelectorAll('.project_visual-image');
 const text = document.querySelectorAll('.project_presentation-text');
 const title = document.querySelectorAll('.project_presentation-title');
 const subtitle = document.querySelectorAll('.project_presentation-subtitle');
 const id = document.querySelectorAll('.project_card-number');
 
-const projects = [];
+const templateToFill = [];
 
-const params = new URLSearchParams(document.location.search.substring(1));
-const dev = params.get('dev');
-console.log(dev);
 
 const createObj = () => {
     image.forEach((el, i) => {
@@ -21,21 +45,21 @@ const createObj = () => {
         myObj.title = title[i];
         myObj.subtitle = subtitle[i];
         myObj.id = id[i];
-        projects.push(myObj);
+        templateToFill.push(myObj);
     })
 };
 
 createObj();
 
 const populateData = (id) => {
-    projects[id].image.style.backgroundImage = `url(assets/${datas[id].image})`;
-    projects[id].text.textContent = datas[id].description;
-    projects[id].title.textContent = datas[id].name;
-    projects[id].subtitle.textContent = datas[id].subtitle;
-    projects[id].id.textContent = datas[id].number;
+    templateToFill[id].image.style.backgroundImage = `url(assets/${datas[id].image})`;
+    templateToFill[id].text.textContent = dataFiltered[id].description;
+    templateToFill[id].title.textContent = dataFiltered[id].name;
+    templateToFill[id].subtitle.textContent = dataFiltered[id].subtitle;
+    templateToFill[id].id.textContent = dataFiltered[id].number;
 };
 
-datas.forEach((el, i) => {
+dataFiltered.forEach((el, i) => {
     populateData(i);
 });
 
