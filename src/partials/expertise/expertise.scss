@@ -6,6 +6,13 @@
   &-block {
     width: 50%;
     height: 100%;
+    transition: width 2s;
+    &.large {
+      width: 70%;
+    }
+    &.little {
+      width: 30%;
+    }
     &_dev {
       background-color: $dark;
       #letter,
@@ -73,6 +80,7 @@
       font-size: 10px;
       & > li {
         line-height: 210%;
+        padding-left: 10px;
       }
     }
   }
@@ -135,3 +143,35 @@
     display: block;
   }
 } 
+
+.cardProject, 
+.dropDownMenu {
+  transition: all 1s;
+  &.hided {
+    opacity: 0;
+  }
+}
+
+.svg-element-ux,
+.svg-element-dev {
+  transition: all 1s;
+  opacity: 0.5;
+  &.rotate {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    display: inline-block;
+    -webkit-animation: rotation 10s infinite linear;
+    animation: rotation 10s infinite linear;
+  }
+}
+
+
+
+@keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}

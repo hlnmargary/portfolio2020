@@ -6,7 +6,8 @@ module.exports = {
     entry: {
         'global': './src/global.js',
         'hero': './src/hero.js',
-        'expertise': './src/expertise.js'
+        'expertise': './src/expertise.js',
+        'projects': './src/projects.js'
     },
     output: {
         filename: '[name].bundle.js',
@@ -50,7 +51,7 @@ module.exports = {
                 use: [
                     { loader: 'style-loader' },
                     { loader: 'css-loader' },
-                    {loader: 'sass-loader'},
+                    { loader: 'sass-loader' },
                     {
                         loader: 'sass-resources-loader',
                         options: {
@@ -71,8 +72,7 @@ module.exports = {
                 }
             }
         ]
-    }
-    ,
+    },
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
@@ -88,6 +88,13 @@ module.exports = {
             title: 'Helene Margary\'s Portfolio',
             description: 'Helene Margary\'s Portfolio',
             template: 'src/expertise.html',
+        }),
+        new HtmlWebpackPlugin({
+            filename: "projects.html",
+            chunks: ['global', 'projects'],
+            title: 'Helene Margary\'s Portfolio',
+            description: 'Helene Margary\'s Portfolio',
+            template: 'src/projects.html'
         })
     ]
 };

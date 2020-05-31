@@ -1,44 +1,42 @@
-{
-	"projects": [
-		{
-			"id": 1,
-			"number": "I",
-			"design": true,
-			"dev": false,
-			"name": "Spotify",
-			"subtitle": "UI Refont",
-			"description": "En gros ici je vais ecrire une ou deux phrases sur le projet et tout et dire ce que j’ai utilisé comme outils peut etre et genre je pourrai peut etre sur le cote ",
-			"image": "spotify.png"
-		},
-		{
-			"id": 2,
-			"number": "II",
-			"design": true,
-			"dev": true,
-			"name": "Banal",
-			"subtitle": "School project",
-			"description": "En gros ici je vais ecrire une ou deux phrases sur le projet et tout et dire ce que j’ai utilisé comme outils peut etre et genre je pourrai peut etre sur le cote ",
-			"image": "banal.png"
-		},
-		{
-			"id": 3,
-			"number": "III",
-			"design": true,
-			"dev": true,
-			"name": "Olymps",
-			"subtitle": "School project",
-			"description": "En gros ici je vais ecrire une ou deux phrases sur le projet et tout et dire ce que j’ai utilisé comme outils peut etre et genre je pourrai peut etre sur le cote ",
-			"image": "olymps.png"
-		},
-		{
-			"id": 4,
-			"number": "IV",
-			"design": true,
-			"dev": true,
-			"name": "Mole people",
-			"subtitle": "School project",
-			"description": "En gros ici je vais ecrire une ou deux phrases sur le projet et tout et dire ce que j’ai utilisé comme outils peut etre et genre je pourrai peut etre sur le cote ",
-			"image": "molepeople.png"
-		}
-	]
-}
+[
+	{
+		"id": 1,
+		"number": "I",
+		"design": true,
+		"dev": false,
+		"name": "Spotify",
+		"subtitle": "UI Refont",
+		"description": "En gros ici je vais ecrire une ou deux phrases sur le projet et tout et dire ce que j’ai utilisé comme outils peut etre et genre je pourrai peut etre sur le cote ",
+		"image": "spotify.png"
+	},
+	{
+		"id": 2,
+		"number": "II",
+		"design": true,
+		"dev": true,
+		"name": "Banal",
+		"subtitle": "School project",
+		"description": "En gros ici je vais ecrire une ou deux phrases sur le projet et tout et dire ce que j’ai utilisé comme outils peut etre et genre je pourrai peut etre sur le cote ",
+		"image": "banal.png"
+	},
+	{
+		"id": 3,
+		"number": "III",
+		"design": true,
+		"dev": true,
+		"name": "Olymps",
+		"subtitle": "School project",
+		"description": "En gros ici je vais ecrire une ou deux phrases sur le projet et tout et dire ce que j’ai utilisé comme outils peut etre et genre je pourrai peut etre sur le cote ",
+		"image": "olymps.png"
+	},
+	{
+		"id": 4,
+		"number": "IV",
+		"design": true,
+		"dev": true,
+		"name": "Mole people",
+		"subtitle": "School project",
+		"description": "En gros ici je vais ecrire une ou deux phrases sur le projet et tout et dire ce que j’ai utilisé comme outils peut etre et genre je pourrai peut etre sur le cote ",
+		"image": "molepeople.png"
+	}
+]
