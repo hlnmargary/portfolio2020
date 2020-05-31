@@ -1,5 +1,4 @@
 .loader {
-  display: none;
   top: 0;
   width: 100%;
   height: 100%;
@@ -8,6 +7,10 @@
   font-weight: 700;
   padding: unset;
   text-transform: uppercase;
+  z-index: 999;
+  &.hideLoader {
+    display: none;
+  }
 }
 
 #container {
@@ -17,7 +20,7 @@
 
 #loader {
   display: block;
-  color: $dark;
+  color: $light;
   font-size: 80px;
   text-align: center;
   padding-top: 300px;

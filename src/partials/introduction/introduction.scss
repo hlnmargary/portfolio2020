@@ -3,9 +3,10 @@
   margin-left: 118px;
   height: 100%;
   display: flex;
+  z-index: 2;
   align-items: flex-end;
   flex-wrap: wrap;
-  color: $dark;
+  color: $light;
   &-content {
     width: 100%;
     transform: translateY(calc(50% + 32px));

@@ -1,3 +1,6 @@
+header {
+  z-index: 100;
+}
 .expertise {
   width: 100%;
   height: 100%;
@@ -60,7 +63,7 @@
 }
 
 
-//MENU
+//MENU UX
 
 .expertise-block_ux {
   position: relative;
@@ -92,6 +95,7 @@
     right: 60px;
     top: 80px;
     color: $dark;
+    background-color: $light;
     .text-project {
       font-size: 14px;
       font-family: 'Suranna';
@@ -133,7 +137,97 @@
       }
     }
   }
+  .list {
+    position: absolute;
+    bottom: 60px;
+    left: 86px;
+    width: 20%;
+    font-size: 12px;
+    font-family: 'Montserrat';
+    font-weight: $thin_weight;
+    color: $dark;
+    font-style: $italic;
+  }
 }
+
+//MENU DEV
+.expertise-block_dev {
+  position: relative;
+  .dropDownMenu_dev {
+    position: absolute;
+    top: 50%;
+    left: 34%;
+    color: $light;
+    & > h2 {
+      font-size: 20px;
+      font-family: 'Suranna';
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+    .subnavigation-part {
+      font-family: 'Montserrat';
+      font-weight: $normal_weight;
+      font-size: 10px;
+      & > li {
+        line-height: 220%;
+        padding-left: 10px;
+      }
+    }
+  }
+  .cardProject_dev {
+    position: absolute;
+    height: 170px;
+    right: 125px;
+    top: 90px;
+    color: $light;
+    .text-project {
+      font-size: 14px;
+      font-family: 'Suranna';
+      text-transform: uppercase;
+      text-align: center;
+      padding-bottom: 10px;
+      text-align: right;
+    }
+    .ligne {
+      position: absolute;
+      width: 70px;
+      top: 35px;
+      left: 106px;
+      height: 1px;
+      background-color: #fffdfb;
+      transform: rotate(90deg);
+    }
+    .secondpart {
+      position: relative;
+      height: 100%;
+      & > h1 {
+        font-family: 'Montserrat';
+        font-weight: $black_weight;
+        text-transform: uppercase;
+        height: 100%;
+        font-size: 15px;
+        text-align: right;
+        span { 
+          font-size: 32px;
+          font-weight: $black_weight; 
+        }
+      }
+      .text-progress { 
+        position: absolute;
+        right: -82px;
+        top: 14px;
+        text-transform: uppercase;
+        width: auto;
+        transform: rotate(90deg);
+        font-size: 8px;
+        font-family: 'Montserrat';
+        font-weight: $light_weight;
+      }
+    }
+  }
+}
+
+
 
 .subnavigation-part_1,
 .subnavigation-part_2,
