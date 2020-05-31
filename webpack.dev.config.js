@@ -1,6 +1,7 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -24,9 +25,11 @@ module.exports = {
         rules: [
             {
                 test: /\.(png|jpg)$/,
-                use: [
-                    'file-loader'
-                ]
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    publicPath: 'assets/'
+                },
             },
             {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -75,6 +78,11 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
+        new CopyWebpackPlugin({
+            patterns: [
+                {from:'src/assets/images',to:'assets'}
+            ]
+        }),
         new HtmlWebpackPlugin({
             filename: "hero.html",
             chunks: ['global', 'hero'],

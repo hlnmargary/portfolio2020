@@ -6,8 +6,8 @@
 		"dev": false,
 		"name": "Spotify",
 		"subtitle": "UI Refont",
-		"description": "En gros ici je vais ecrire une ou deux phrases sur le projet et tout et dire ce que j’ai utilisé comme outils peut etre et genre je pourrai peut etre sur le cote ",
-		"image": "spotify.png"
+		"description": "Spotify. En gros ici je vais ecrire une ou deux phrases sur le projet et tout et dire ce que j’ai utilisé comme outils peut etre et genre je pourrai peut etre sur le cote ",
+		"image": "vivi.png"
 	},
 	{
 		"id": 2,
@@ -16,8 +16,8 @@
 		"dev": true,
 		"name": "Banal",
 		"subtitle": "School project",
-		"description": "En gros ici je vais ecrire une ou deux phrases sur le projet et tout et dire ce que j’ai utilisé comme outils peut etre et genre je pourrai peut etre sur le cote ",
-		"image": "banal.png"
+		"description": "Banal. En gros ici je vais ecrire une ou deux phrases sur le projet et tout et dire ce que j’ai utilisé comme outils peut etre et genre je pourrai peut etre sur le cote ",
+		"image": "vivi.png"
 	},
 	{
 		"id": 3,
@@ -26,8 +26,8 @@
 		"dev": true,
 		"name": "Olymps",
 		"subtitle": "School project",
-		"description": "En gros ici je vais ecrire une ou deux phrases sur le projet et tout et dire ce que j’ai utilisé comme outils peut etre et genre je pourrai peut etre sur le cote ",
-		"image": "olymps.png"
+		"description": "Olymps. En gros ici je vais ecrire une ou deux phrases sur le projet et tout et dire ce que j’ai utilisé comme outils peut etre et genre je pourrai peut etre sur le cote ",
+		"image": "vivi.png"
 	},
 	{
 		"id": 4,
@@ -36,7 +36,7 @@
 		"dev": true,
 		"name": "Mole people",
 		"subtitle": "School project",
-		"description": "En gros ici je vais ecrire une ou deux phrases sur le projet et tout et dire ce que j’ai utilisé comme outils peut etre et genre je pourrai peut etre sur le cote ",
-		"image": "molepeople.png"
+		"description": "Mole people. En gros ici je vais ecrire une ou deux phrases sur le projet et tout et dire ce que j’ai utilisé comme outils peut etre et genre je pourrai peut etre sur le cote ",
+		"image": "vivi.png"
 	}
 ]
