@@ -23,8 +23,10 @@ for (const key of params.keys()) {
 
 const projects = document.querySelector('.project');
 const wrapper = document.querySelector('.wrapper');
+projects.setAttribute('id', 'project-1');
 for (let i = 0; i < dataFiltered.length - 1; i++) {
     const clone = projects.cloneNode(true);
+    clone.setAttribute('id', `project-${i + 2}`);
     wrapper.appendChild(clone);
 }
 
