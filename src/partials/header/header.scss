@@ -2,6 +2,7 @@ header {
   position: absolute;
   left: 118px;
   top: 90px;
+  z-index: 997;
   ul {
     font-family: 'Montserrat';
     font-weight: $bold_weight;
@@ -17,6 +18,9 @@ header {
       border-radius: 50%;
       margin: 18px auto;
     }
+  }
+  &.hideHeader {
+    display: none;
   }
 }
 
