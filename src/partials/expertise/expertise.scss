@@ -5,38 +5,15 @@ header {
   width: 100%;
   height: 100%;
   display: flex;
-  height: 100%;
-  &-block {
-    width: 50%;
+  background-color: $light;
+  .expertise-block {
+    width: 100%;
     height: 100%;
-    transition: width 2s;
-    &.large {
-      width: 70%;
-    }
-    &.little {
-      width: 30%;
-    }
-    &_dev {
-      background-color: $dark;
-      #letter,
-      #textCurved,
-      #border {
-        fill: $black;
-      }
-    }
-    &_ux {
-      background-color: $light;
-      #letter1,
-      #textCurved1,
-      #border {
-        fill: $dark;
-      }
-    }
   }
 }
 
 // SVG STYLE
-.textCircle, .textCircle1 {
+.textCircle{
   display: block;
   margin: auto;
   height: 100%;
@@ -44,142 +21,40 @@ header {
 
 #text,
 #letter,
-#letter1
 #pathTextCurved {
   pointer-events: none;
 }
 
-#letter, #letter1 {
+#letter{
   text-anchor: middle;
   alignment-baseline: central;
   font-size: 50px;
   font-weight: 100;
 }
 
-#textCurved, #textCurved1 {
+#textCurved{
   font-weight: $extra_bold_weight;
   text-transform: uppercase;
   font-family: 'Montserrat';
 }
 
 
-//MENU UX
+    .svg {
+      position: fixed;
+      bottom: -30%;
+      right: -15%;
+      width: 40%;
+      height: auto;
+      overflow: hidden;
+    }
 
-.expertise-block_ux {
-  position: relative;
-  .dropDownMenu_ux {
-    position: absolute;
-    top: 80px;
-    left: 86px;
-    & > h2 {
-      font-size: 20px;
-      font-family: 'Suranna';
-      padding-bottom: 10px;
-      padding-top: 10px;
-    }
-    .subnavigation-part {
-      font-family: 'Montserrat';
-      font-weight: $semibold_weight;
-      font-size: 10px;
-      & > li {
-        line-height: 210%;
-        padding-left: 10px;
-      }
-    }
-  }
-  .cardProject_ux {
-    position: absolute;
-    border: solid 1px $dark;
-    width: 110px;
-    height: 170px;
-    right: 60px;
-    top: 80px;
-    color: $dark;
-    background-color: $light;
-    .text-project {
-      font-size: 14px;
-      font-family: 'Suranna';
-      text-transform: uppercase;
-      text-align: center;
-      padding: 20px;
-    }
-    .ligne {
-      width: 100%;
-      height: 1px;
-      background-color: $dark;
-    }
-    .secondpart {
-      position: relative;
-      height: 100%;
-      padding: 12px;
-      & > h1 {
-        font-family: 'Montserrat';
-        font-weight: $black_weight;
-        width: 70%;
-        height: 100%;
-        font-size: 46px;
-        text-align: center;
-        span { 
-          font-size: 32px;
-          font-weight: $black_weight; 
-        }
-      }
-      .text-progress { 
-        position: absolute;
-        top: 54px;
-        right: -26px;
-        text-transform: uppercase;
-        width: auto;
-        transform: rotate(90deg);
-        font-size: 8px;
-        font-family: 'Montserrat';
-        font-weight: $light_weight;
-      }
-    }
-  }
-  .list {
-    position: absolute;
-    bottom: 60px;
-    left: 86px;
-    width: 20%;
-    font-size: 12px;
-    font-family: 'Montserrat';
-    font-weight: $thin_weight;
-    color: $dark;
-    font-style: $italic;
-  }
-}
 
-//MENU DEV
-.expertise-block_dev {
-  position: relative;
-  .dropDownMenu_dev {
-    position: absolute;
-    top: 50%;
-    left: 34%;
-    color: $light;
-    & > h2 {
-      font-size: 20px;
-      font-family: 'Suranna';
-      padding-bottom: 10px;
-      padding-top: 10px;
-    }
-    .subnavigation-part {
-      font-family: 'Montserrat';
-      font-weight: $normal_weight;
-      font-size: 10px;
-      & > li {
-        line-height: 220%;
-        padding-left: 10px;
-      }
-    }
-  }
-  .cardProject_dev {
-    position: absolute;
+  .cardProject{
+    position: fixed;
     height: 170px;
     right: 125px;
     top: 90px;
-    color: $light;
+    color: $black;
     .text-project {
       font-size: 14px;
       font-family: 'Suranna';
@@ -194,7 +69,7 @@ header {
       top: 35px;
       left: 106px;
       height: 1px;
-      background-color: #fffdfb;
+      background-color: $light;
       transform: rotate(90deg);
     }
     .secondpart {
@@ -225,26 +100,8 @@ header {
       }
     }
   }
-}
 
 
-
-.subnavigation-part_1,
-.subnavigation-part_2,
-.subnavigation-part_3 {
-  display: none;
-  &.displayed { 
-    display: block;
-  }
-} 
-
-.cardProject, 
-.dropDownMenu {
-  transition: all 1s;
-  &.hided {
-    opacity: 0;
-  }
-}
 
 .svg-element-ux,
 .svg-element-dev {
@@ -267,5 +124,87 @@ header {
   }
   100% {
       transform: rotate(360deg);
+  }
+}
+
+
+/// TEXTES
+
+.curiculum {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25%;
+  .experiences, .cursus , .skills{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+  }
+  .title_container {
+    font-size: 68px;
+    font-family: 'Suranna';
+    text-transform: uppercase;
+    color: $dark;
+    padding-right: 50px;
+    text-align: right;
+    width: 40%;
+  }
+  .informations {
+    .information {
+      display: flex;
+      height: fit-content;
+      margin-bottom: 80px;
+      .big_line {
+        width: 1px;
+        background-color: $dark;
+        margin-right: 26px;
+        height: auto;
+      }
+      .text {
+        height: fit-content;
+      }
+    }
+    .date {
+      font-weight: $extra_bold_weight;
+      font-family: 'Montserrat';
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+    .info_big {
+      font-weight: $black_weight;
+      font-family: 'Montserrat';
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .info_little {
+      font-weight: $normal_weight;
+      font-family: 'Montserrat';
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+    .description {
+      font-weight: $semibold_weight;
+      font-family: 'Montserrat';
+      font-size: 12px;
+      margin-bottom: 28px;
+      width: 160px;
+    }
+    .list {
+      font-weight: $normal_weight;
+      font-family: 'Montserrat';
+      font-size: 10px;
+      text-transform: uppercase;
+      width: 200px;
+      & > li {
+        margin-bottom: 4px;
+      }
+      &_large {
+        margin-top: 20px;
+        & > li {
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 }

@@ -1,8 +1,9 @@
 header {
-  position: absolute;
-  left: 118px;
+  position: fixed;
+  left: 8vw;
   top: 90px;
   z-index: 997;
+
   ul {
     font-family: 'Montserrat';
     font-weight: $bold_weight;

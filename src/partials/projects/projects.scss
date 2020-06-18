@@ -1,107 +1,124 @@
-.project {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  .project_visual {
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 400px;
-    width: 400px;
-    margin: auto;
-    .project_visual-image {
-      height: 100%;
-      width: 100%;
-      background-color: blue;
-      border-radius: 50%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-image: url("https://cdn.radiofrance.fr/s3/cruiser-production/2018/04/92a1e3cd-bcff-430e-8c0d-874472f7ba81/838_gettyimages-943748360.webp");
-    }
-  }
-  .project_presentation {
-    width: 100%;
-    display: flex;
-    justify-content: end; 
-    justify-content: space-between;
-    .project_presentation-text {
-      position: relative;
-      width: 350px;
-      padding-left: 118px;
-      font-size: 18px;
-      color: black;
-      bottom: 65px;
-      font-family: 'Montserrat';
-      font-weight: $thin_weight;
-      font-style: $italic;
-    }
-    .project_presentation-title {
-      text-align: right;
-      position: absolute;
-      bottom: 65px;
-      right: 60px;
-      width: 400px;
-      font-size: 18px;
-      color: black;
-      font-family: 'Montserrat';
-      font-weight: $medium_weight;
-        .title {
-          font-weight: $bold_weight;
-          font-size: 24px;
-        }
-    }
-  }
+header {
+	position: absolute !important;
+}
 
-  .project_card {
-    position: absolute;
-    border: solid 1px $dark;
-    width: 110px;
-    height: 170px;
-    right: 60px;
-    top: 80px;
-    color: $dark;
-    .text-project {
-      font-size: 14px;
-      font-family: 'Suranna';
-      text-transform: uppercase;
-      text-align: center;
-      padding: 20px;
-    }
-    .ligne {
-      width: 100%;
-      height: 1px;
-      background-color: $dark;
-    }
-    .secondpart {
-      position: relative;
-      height: 100%;
-      padding: 35px 12px;
-      & > h1 {
-        font-family: 'Montserrat';
-        font-weight: $black_weight;
-        width: 70%;
-        height: 100%;
-        font-size: 46px;
-        text-align: center;
-      }
-      .text-progress { 
-        position: absolute;
-        top: 54px;
-        right: -26px;
-        text-transform: uppercase;
-        width: auto;
-        transform: rotate(90deg);
-        font-size: 8px;
-        font-family: 'Montserrat';
-        font-weight: $light_weight;
-      }
-    }
+.projects {
+	width: 100vw;
+	height: 100vh;
+	position: absolute !important;
+	& > nav {
+		width: 50%;
+		height: fit-content;
+		position: absolute;
+    right: 120px;
+		top: 90px;
+		& > ul {
+			width: 100%;
+			height: fit-content;
+			display: flex;
+			justify-content: space-between;
+			& > li {
+				width: fit-content;
+				height: fit-content;
+				text-align: center;
+				& > h3 {
+					position: absolute;
+					text-align: center;
+					display: inline-block;
+					vertical-align: middle;
+					width: 100px;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				& > svg {
+					width: 100px;
+					height: 100px;
+				}
+			}
+		}
+	}
+}
+
+.circle {
+	opacity: 0;
+	&.rotate {
+		opacity: 1;
+		transform-origin: 50% 50%;
+		display: inline-block;
+		-webkit-animation: rotation 10s infinite linear;
+		animation: rotation 10s infinite linear;
+	}
+}
+
+
+@keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
   }
 }
 
+.projects-container {
+	width: 100vw;
+	height: 40vh;
+	margin-top: 45vh;
+	.project {
+		top: 0;
+		left: 0;
+		margin-left: 8vw;
+		width: 90vw;
+		height: 100%;
+		display: none;
+		&.active {
+			display: flex;
+		}
+		.project-image {
+			width: 70%;
+			height: 100%;
+			.image-container {
+				width: 100%;
+				height: 100%;
+				background-image: url("https://images.unsplash.com/photo-1499063078284-f78f7d89616a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80");
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				filter: grayscale(100%);
+				&:hover {
+					filter: none;
+				}
+			}
+		}
+		.project-text {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			margin-left: 25px;
+			& > h1 {
+				font-size: 6rem;
+				font-family: 'Suranna';
+				text-transform: uppercase;
+				padding-bottom: 10px;
+				text-align: left;
+			}
+			& > h2 {
+				font-family: 'Montserrat';
+				font-weight: $semibold_weight;
+				text-transform: uppercase;
+				font-size: 48px;
+			}
+			.horizontal-line {
+				width: 50%;
+				height: 1px;
+				background-color: $dark;
+			}
+			& > p {
+				font-family: 'Montserrat';
+				font-weight: $light_weight;
+				font-size: 14px;
+				max-width: 65%;
+			}
+		}
+	}
+}
