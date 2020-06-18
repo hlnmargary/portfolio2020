@@ -1,62 +1,22 @@
 import './projects.scss';
-import datas from '../../assets/datas/data.json';
 import { TweenMax, Linear } from "gsap";
-
-const getDataAccordingToParams = (param) => datas.filter(el => el[param] == true);
-
-/*
-* Get params from URL
-*/
-// const params = new URLSearchParams(document.location.search.substring(1));
-// let dataFiltered = null;
-// for (const key of params.keys()) {
-//     switch (key) {
-//         case 'dev':
-//             dataFiltered = getDataAccordingToParams(key);
-//             break;
-//         case 'design':
-//             dataFiltered = getDataAccordingToParams(key);
-//             break;
-//         default:
-//             console.log(`Sorry, the case is not handled`);
-//     }
-// }
-
 
 const circles = [...document.querySelectorAll('.circle')];
 const navs = [...document.querySelectorAll('.nav-item')];
-const project = document.querySelectorAll('.project');
-console.log(project.dataset);
+const projects = [...document.querySelectorAll('.project')];
 
 const handleClick = el => {
-    if (el.dataset.number === project.dataset.number) {
-        project.classList.add('active');
-        if (project.classList.contains('active')) {
-            project.classList.remove('active');
-        }
-    }
-    else if (el.dataset.number !== project.dataset.number) {
-        project.classList.add('active');
-        if (project.classList.contains('large')) {
-            project.classList.remove('large');
-
-        }
-    }
-};
-
-
-// const handleClick = el => {
-//     if (el.closest('svg').classList.contains('rotate')) {
-//         el.closest('svg').classList.remove('rotate');
-//     } else {
-//         el.closest('svg').classList.add('rotate');
-//     }
-// };
+    navs.forEach((nav, i) => {
+        if (circles[i].classList.contains('rotate')) circles[i].classList.remove('rotate')
+        if (projects[i].classList.contains('active')) projects[i].classList.remove('active')
+        if (el.closest('li').dataset.number === projects[i].dataset.number) projects[i].classList.add('active')
+    });
+    el.closest('svg').classList.add('rotate');
+}
 
 navs.forEach(nav => {
     nav.addEventListener('click', function (e) {
         handleClick(e.target);
-        console.log('clicked');
     });
 });
 
