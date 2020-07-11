@@ -1,6 +1,41 @@
 import './projects.scss';
 import { TweenMax, Linear } from "gsap";
 
+const $bigBall = document.querySelector('.cursor__ball--big');
+const $smallBall = document.querySelector('.cursor__ball--small');
+const $hoverables = document.querySelectorAll('.project-image');
+
+// Listeners
+document.body.addEventListener('mousemove', onMouseMove);
+for (let i = 0; i < $hoverables.length; i++) {
+    $hoverables[i].addEventListener('mouseenter', onMouseHover);
+    $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+}
+
+// Move the cursor
+function onMouseMove(e) {
+    TweenMax.to($bigBall, 0.2, {
+        x: e.pageX - 15,
+        y: e.pageY - 15
+    })
+    TweenMax.to($smallBall, 0.1, {
+        x: e.pageX - 5,
+        y: e.pageY - 7
+    })
+}
+
+// Hover an element
+function onMouseHover() {
+    TweenMax.to($bigBall, 0.3, {
+        scale: 4
+    })
+}
+function onMouseHoverOut() {
+    TweenMax.to($bigBall, 0.3, {
+        scale: 1
+    })
+}
+
 const circles = [...document.querySelectorAll('.circle')];
 const navs = [...document.querySelectorAll('.nav-item')];
 const projects = [...document.querySelectorAll('.project')];
@@ -11,7 +46,7 @@ const handleClick = el => {
         if (projects[i].classList.contains('active')) projects[i].classList.remove('active')
         if (el.closest('li').dataset.number === projects[i].dataset.number) projects[i].classList.add('active')
     });
-    el.closest('svg').classList.add('rotate');
+    el.closest('svg').classList.add('rotate')
 }
 
 navs.forEach(nav => {
@@ -20,28 +55,20 @@ navs.forEach(nav => {
     });
 });
 
-// const circlePath = document.getElementById("circlePath");
-// const lengthCirclePath = circlePath.getTotalLength();
-// const pathTextCurved = document.querySelector(".pathTextCurved");
-// let circlePath1 = document.getElementById("circlePath1");
-// let lengthCirclePath1 = circlePath1.getTotalLength();
-// let circle1 = document.getElementById("circle1");
-// let textCurved1 = document.getElementById("textCurved1");
 
-// pathTextCurved.setAttribute("textLength", lengthCirclePath - 20);
-// pathTextCurved1.setAttribute("textLength", lengthCirclePath1 - 20);
+let circlePath1 = document.getElementById("circlePath1");
+let circlePath2 = document.getElementById("circlePath2");
+let circlePath3 = document.getElementById("circlePath3");
+let circlePath4 = document.getElementById("circlePath4");
+let circlePath5 = document.getElementById("circlePath5");
+let lengthCirclePath1 = circlePath1.getTotalLength();
+let lengthCirclePath2 = circlePath2.getTotalLength();
+let lengthCirclePath3 = circlePath3.getTotalLength();
+let lengthCirclePath4 = circlePath4.getTotalLength();
+let lengthCirclePath5 = circlePath4.getTotalLength();
 
-// let circlePath = document.getElementById("circlePath");
-// let lengthCirclePath = circlePath.getTotalLength();
-// let circle = document.getElementById("circle");
-// let textCurved = document.getElementById("textCurved");
-
-// document.getElementById("pathTextCurved").setAttribute(
-//     "textLength", lengthCirclePath - 20);
-// const hover = TweenMax.to(textCurved, 40, {
-//     transformOrigin: "50% 50%",
-//     rotation: "-360",
-//     repeat: -1,
-//     ease: Linear.easeNone
-// });
-
+document.getElementById("pathTextCurved1").setAttribute("textLength", lengthCirclePath1 - 20);
+document.getElementById("pathTextCurved2").setAttribute("textLength", lengthCirclePath2 - 20);
+document.getElementById("pathTextCurved3").setAttribute("textLength", lengthCirclePath3 - 20);
+document.getElementById("pathTextCurved4").setAttribute("textLength", lengthCirclePath4 - 20);
+document.getElementById("pathTextCurved5").setAttribute("textLength", lengthCirclePath5 - 20);

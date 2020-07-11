@@ -34,27 +34,33 @@ header {
 
 #textCurved{
   font-weight: $extra_bold_weight;
+  color: $red;
   text-transform: uppercase;
   font-family: 'Montserrat';
+  fill: $dark;
 }
 
 
     .svg {
       position: fixed;
-      bottom: -30%;
-      right: -15%;
-      width: 40%;
+      bottom: 4rem;
+      right: 7rem;
+      width: 9rem;
       height: auto;
       overflow: hidden;
+      fill: $red;
     }
 
 
   .cardProject{
+    // background-color: $red;
     position: fixed;
-    height: 170px;
+    height: 100px;
     right: 125px;
     top: 90px;
     color: $black;
+    padding-left: 10px;
+    padding-right: 10px;
     .text-project {
       font-size: 14px;
       font-family: 'Suranna';
@@ -89,7 +95,7 @@ header {
       }
       .text-progress { 
         position: absolute;
-        right: -82px;
+        right: -62px;
         top: 14px;
         text-transform: uppercase;
         width: auto;
@@ -136,6 +142,7 @@ header {
   display: flex;
   flex-direction: column;
   margin-top: 25%;
+  background-color: $light;
   .experiences, .cursus , .skills{
     width: 100%;
     height: fit-content;
@@ -207,4 +214,4 @@ header {
       }
     }
   }
-}
+} 
