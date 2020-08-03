@@ -1,17 +1,15 @@
-$breakpoints1: 800px;
-$breakpoints2: 801px;
 
-@mixin mobile {
-	@media all and (max-width: $breakpoints1) {
+// @mixin mobile {
+// 	@media all and (max-width: $breakpoints1) {
 
-	}
-}
+// 	}
+// }
 
-@mixin desktop {
-	@media all and (min-width: $breakpoints2) {
+// @mixin desktop {
+// 	@media all and (min-width: $breakpoints2) {
 
-	}
-}
+// 	}
+// }
 
 
 header {
@@ -51,9 +49,6 @@ header {
 			height: fit-content;
 			// display: flex;
 			justify-content: space-between;
-			@include mobile {
-				display: flex;
-			}
 			& > li {
 				width: fit-content;
 				height: fit-content;
